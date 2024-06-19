@@ -1,7 +1,6 @@
 #!/bin/bash
 
 read -p "Enter the project path: " PROJECT_PATH
-
 read -p "Enter the game name (without extension): " GAME_NAME
 
 cd "$PROJECT_PATH" || { echo "Project path not found. Exiting."; exit 1; }
@@ -10,5 +9,7 @@ cd "$PROJECT_PATH" || { echo "Project path not found. Exiting."; exit 1; }
 
 echo "Run Compled."
 echo " "
-echo "If you have any problem or if you have any questions than please visit \033[1;34m https://youtube.com/@undergamer_official \033[0m"
+echo "If you face any problem or if you have any questions than please visit \033[1;34m https://youtube.com/@undergamer_official \033[0m"
 echo "Thanks To UnderGamer"
+echo "\033[1;34m -Ap Games Studio- \033[0m"
+
