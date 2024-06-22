@@ -5,6 +5,8 @@ read -p "Enter the game name (without extension): " GAME_NAME
 
 cd "$PROJECT_PATH" || { echo "Project path not found. Exiting."; exit 1; }
 
+clear
+
 ~/godot/Godot_v4.2.2-stable_linux.arm32 --export-release "Android" ./"$GAME_NAME".apk --headless
 
 echo ""
@@ -15,5 +17,5 @@ echo "If you face any problem or if you have any questions than please visit htt
 
 echo ""
 echo "Thanks To UnderGamer"
-echo "Ap Games Studio"
+echo ""
 
