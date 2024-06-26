@@ -10,7 +10,7 @@ clear
 cd ~/godot
 chmod +x Godot_v4.2.2-stable_linux.arm32
 
-Godot_v4.2.2-stable_linux.arm32 --export-release "Android" ./"$GAME_NAME".apk --headless
+./Godot_v4.2.2-stable_linux.arm32 --export-release "Android" ./"$GAME_NAME".apk --headless
 
 cd ~
 
