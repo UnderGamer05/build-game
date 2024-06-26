@@ -1,5 +1,10 @@
 #!/bin/bash
 
+arch=$(uname -m)
+
+godot_arch32_zip="Godot_v4.2.2-stable_linux.arm32.zip"
+godot_arch64_zip="Godot_v4.2.2-stable_linux.arm64.zip"
+
 read -p "Enter the project path: " PROJECT_PATH
 read -p "Enter the game name (without extension): " GAME_NAME
 
@@ -8,9 +13,20 @@ cd "$PROJECT_PATH" || { echo "Project path not found. Exiting."; exit 1; }
 clear
 
 cd ~/godot
+
+if [ "$arch" == "aarch64" ]; then
+
+chmod +x Godot_v4.2.2-stable_linux.arm64
+
+./Godot_v4.2.2-stable_linux.arm64 --export-release "Android" ./"$GAME_NAME".apk --headless
+
+else
+
 chmod +x Godot_v4.2.2-stable_linux.arm32
 
 ./Godot_v4.2.2-stable_linux.arm32 --export-release "Android" ./"$GAME_NAME".apk --headless
+
+fi
 
 cd ~
 
