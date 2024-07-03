@@ -11,17 +11,10 @@ clear
 
 cd ~/godot
 
-if [ "$arch" == "aarch64" ]; then
 
-  chmod +x Godot_v4.2.2-stable_linux.arm64
-  ./Godot_v4.2.2-stable_linux.arm64 --export-release "Android" ./"$GAME_NAME".apk --headless
+chmod +x Godot_v4.2.2-stable_linux.arm32
+./Godot_v4.2.2-stable_linux.arm32 --export-release "Android" ./"$GAME_NAME".apk --headless
 
-else
-
-  chmod +x Godot_v4.2.2-stable_linux.arm32
-  ./Godot_v4.2.2-stable_linux.arm32 --export-release "Android" ./"$GAME_NAME".apk --headless
-
-fi
 
 cd ~
 
